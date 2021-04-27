@@ -11,14 +11,16 @@ this is the azure cloud infrastructure, it is used to create azure AKS and deplo
 
 # setting up the config file for k8
 
-terraform output kube_config > config-terraform-eks-demo
-cp C:/Users/<username>/.kube/config C:/Users/<username>/.kube/config.bak
-cp ./config-terraform-eks-demo C:/Users/<username>/.kube/config
+1. terraform output kube_config > config-terraform-eks-demo
+
+2. cp C:/Users/<username>/.kube/config C:/Users/<username>/.kube/config.bak
+3. cp ./config-terraform-eks-demo C:/Users/<username>/.kube/config
 
 # deploying the app
 
-kubectl apply -f deployment.yaml 
-kubectl apply -f uberapp-service_fe.yaml
+1. kubectl apply -f deployment.yaml 
+
+2. kubectl apply -f uberapp-service_fe.yaml
 
 note- curently in deployment.yaml image is set up as shamsalamnamimi/uber-fe:prod, please change to the new docker immage 
 
